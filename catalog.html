@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Каталог товаров</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+      </a>
+      <ul class="navigation-list">
+        <li><a href="info.html">Информация</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="price-list.html">Прайс-лист</a></li>
+        <li class="site-navigation-current"><a href="catalog.html">Магазин</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <ul class="user-navigaton">
+        <li class="login-link">Вход</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Средства для ухода</h1>
+    <ul class="breadcrumbs">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="catalog.html">Магазин</a></li>
+      <li class="breadcrumbs-current">Средства для ухода</li>
+    </ul>
+    <section class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <form action="submit" class="filters-form">
+        <h2>Производители:</h2>
+        <ul class="manufacturers-list">
+          <li>
+            <input type="checkbox" id="baxter-of-california" name="baxter-of-california" checked>
+            <label for="baxter-of-california">Baxter of California</label>
+          </li>
+          <li>
+            <input type="checkbox" id="mr-natty" name="mr-natty">
+            <label for="mr-natty">Mr Natty</label>
+          </li>
+          <li>
+            <input type="checkbox" id="suavecito" name="suavecito" checked>
+            <label for="suavecito">Suavecito</label>
+          </li>
+          <li>
+            <input type="checkbox" id="malin-goetz" name="malin-goetz">
+            <label for="malin-goetz">Malin-Goetz</label>
+          </li>
+          <li>
+            <input type="checkbox" id="murrays" name="murrays">
+            <label for="murrays">Murray's</label>
+          </li>
+          <li>
+            <input type="checkbox" id="american-crew" name="american-crew" checked>
+            <label for="american-crew">American Crew</label>
+          </li>
+        </ul>
+        <h2>Группы товаров:</h2>
+        <ul class="product-groups-list">
+          <li>
+            <input type="radio" id="shaving-accessories" name="product-group-radio" value="shaving-accessories">
+            <label for="shaving-accessories">Бритвенные принадлежности</label>
+          </li>
+          <li>
+            <input type="radio" id="care-products" name="product-group-radio" value="care-products" checked>
+            <label for="care-products">Средства для ухода</label>
+          </li>
+          <li>
+            <input type="radio" id="accessories" name="product-group-radio" value="accessories">
+            <label for="accessories">Аксессуары</label>
+          </li>
+        </ul>
+        <button type="submit">Показать</button>
+      </form>
+    </section>
+    <section class="catalog">
+      <h2 class="visually-hidden">Список средств для ухода</h2>
+      <ul class="catalog-list">
+        <li class="catalog-item">
+          <a href="catalog-item.html">
+            <h3>
+              <span class="catalog-category">Набор для путешествий</span>
+              <span class="catalog-item-title">«Baxter of California»</span>
+            </h3>
+          </a>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2 900 ₽</b>
+            <a class="button" href="#">Купить</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <a href="catalog-item.html">
+            <h3>
+              <span class="catalog-category">Набор для путешествий</span>
+              <span class="catalog-item-title">«Baxter of California»</span>
+            </h3>
+          </a>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2 900 ₽</b>
+            <a class="button" href="#">Купить</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <a href="catalog-item.html">
+            <h3>
+              <span class="catalog-category">Набор для путешествий</span>
+              <span class="catalog-item-title">«Baxter of California»</span>
+            </h3>
+          </a>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2 900 ₽</b>
+            <a class="button" href="#">Купить</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <a href="catalog-item.html">
+            <h3>
+              <span class="catalog-category">Набор для путешествий</span>
+              <span class="catalog-item-title">«Baxter of California»</span>
+            </h3>
+          </a>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2 900 ₽</b>
+            <a class="button" href="#">Купить</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <a href="catalog-item.html">
+            <h3>
+              <span class="catalog-category">Набор для путешествий</span>
+              <span class="catalog-item-title">«Baxter of California»</span>
+            </h3>
+          </a>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2 900 ₽</b>
+            <a class="button" href="#">Купить</a>
+          </p>
+        </li>
+        <li class="catalog-item">
+          <a href="catalog-item.html">
+            <h3>
+              <span class="catalog-category">Набор для путешествий</span>
+              <span class="catalog-item-title">«Baxter of California»</span>
+            </h3>
+          </a>
+          <p>
+            <a href="catalog-item.html">
+              <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+            </a>
+          </p>
+          <p class="catalog-item-price">
+            <b>2 900 ₽</b>
+            <a class="button" href="#">Купить</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="main-footer">
+
+  </footer>
+  <script>
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      ':35729/livereload.js?snipver=1"></' + 'script>')
+
+  </script>
+</body>
+
+</html>
