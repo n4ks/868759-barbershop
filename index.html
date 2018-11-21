@@ -70,8 +70,8 @@
       <figure class="gallery-content">
         <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер" alt=""></a>
       </figure>
-      <span class="button gallery-button gallery-button-back">Назад</span>
-      <span class="button gallery-button gallery-button-next">Вперед</span>
+      <button class="button gallery-button gallery-button-back" type="button">Назад</button>
+      <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
     </section>
     <section class="contacts">
       <h2>Контактная информация</h2>
@@ -96,6 +96,7 @@
       <!-- Здесь будет форма -->
     </section>
   </main>
+  
   <footer class="main-footer">
     <p class="footer-contacts">
       Барбершоп «Бородинский»<br>
@@ -113,9 +114,16 @@
     </div>
     <p class="footer-copyright">
       <b>Разработано:</b>
-      <a href="https://htmlacademy.ru" class="button"></a>
+      <a href="https://htmlacademy.ru" class="button">htmlacademy</a>
     </p>
   </footer>
+
+  <section class="modal modal-login">
+    <h2>Личный кабинет</h2>
+    <p>Введите свой логин и пароль.</p>
+    <!-- Здесь будет форма -->
+    <span class="modal-close">x</span>
+  </section>
 
   <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
