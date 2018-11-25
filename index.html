@@ -10,23 +10,22 @@
 
 <body>
   <header class="main-header">
-    <nav class="main-navigation" aria-label="Главная панель навигации">
+    <nav class="main-navigation">
+      <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа «Бородинский»">
+      </a>
       <ul class="site-navigation">
-        <!--Логотип можно вынести из списка-->
-        <a class="main-header-logo">
-          <img src="img/index-logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
-        </a>
-        <li><a href="info.html" aria-label="Страница с информацией">Информация</a></li>
-        <li><a href="news.html" aria-label="Страница новостей">Новости</a></li>
-        <li><a href="price.html" aria-label="Страница с прайс-листом">Прайс-лист</a></li>
-        <li><a href="catalog.html" aria-label="Страница магазина">Магазин</a></li>
-        <li><a href="contacts.html" aria-label="Страница с контактами">Контакты</a></li>
+        <li><a href="info.html">Информация</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="price.html">Прайс-лист</a></li>
+        <li><a href="catalog.html">Магазин</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
       </ul>
     </nav>
-
-    <ul class="user-navigation" aria-label="Пользовательская навигация">
-      <li class="login-link">
-        <button type="button" aria-label="Открыть форму для входа"></button>
+    <ul class="user-navigation">
+      <li>
+        <a class="login-link" href="login.html">Вход</a>
+        <!--прогрессивное улучшение ссылки до формы, если JS не сработал то откроется страница логина, иначе - popup-->
       </li>
     </ul>
   </header>
@@ -60,12 +59,12 @@
       <ul class="news-list">
         <li class="news-item">
           <p>Нам наконец завезли ягермайстер! Теперь Вы можете пропустить стаканчик во время стрижки</p>
-          <time datetime="11-01-2016">11 января</time>
+          <time datetime="2016-01-11">11 января</time>
         </li>
         <li class="news-item">
           <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши
             стройные ряды</p>
-          <time datetime="18-01-2016">18 января</time>
+          <time datetime="2016-01-18">18 января</time>
         </li>
       </ul>
       <a class="button" href="news.html">Все новости</a>
@@ -73,14 +72,13 @@
 
     <section class="gallery">
       <h2>Фотогалерея</h2>
-      <div class="gallery-content">
-        <a href="#" aria-label="Открыть фото в полном размере">
-          <img src="img/photogallery.jpg" width="286" height="164" alt="Интерьер">
+      <figure class="gallery-content">
+        <a href="#">
+          <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
         </a>
-      </div>
-
-      <button type="button" class="button gallery-button-back" aria-label="Предыдущая фотография">Назад</button>
-      <button type="button" class="button gallery-button-next" aria-label="Следующая фотография">Вперед</button>
+      </figure>
+      <button class="button gallery-button-back" type="button">Назад</button>
+      <button class="button gallery-button-next" type="button">Вперед</button>
     </section>
 
     <section class="contacts">
@@ -88,32 +86,39 @@
       <p>
         Барбершоп «Бородинский»<br>
         Адрес: г. Санкт-Петербург, б. Конюшенная, д. 19/8<br>
-        Телефон: <a href="tel: +7-495-666-02-66" aria-label="Позвонить в барбершоп «Бородинский»">+7 (495) 666-02-66</a>
+        Телефон: <a href="tel:+7-495-666-02-66">+7 (495) 666-02-66</a>
       </p>
       <p>
         Время работы:<br>
         пн-пт: с 10:00 до 22:00<br>
         сб-вс: с 10:00 до 19:00
       </p>
-      <!-- Почему тут должна быть ссылка, а не попап? -->
-      <button type="button" aria-label=" Открыть карту проезда">Как проехать</button>
-      <a class="button" href="contacts.html" aria-label="Страница с контактными данными">Обратная связь</a>
+      <a class="button" href="map.html">Как проехать</a>
+      <a class="button" href="contacts.html">Обратная связь</a>
     </section>
 
     <section class="appointment">
       <h2>Записаться</h2>
       <!-- Зачем параграфу класс? -->
       <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с Вами для подтверждения брони</p>
-      <form action="post">
-        <label for="date-input">Дата</label>
-        <input type="date" name="date-input" id="date-input" value="2017-10-08" required>
-        <label for="time-input">Время</label>
-        <input type="time" name="time-input" id="time-input" value="10:00" required>
-        <label for="name-input">Ваше имя</label>
-        <input type="text" name="name-input" id="name-input" value="Борода" required>
-        <label for="phone-input">Телефон</label>
-        <input type="tel" name="phone-input" id="phone-input" value="+7 123 456-78-90" required>
-        <button type="submit" aria-label="Отправка формы подтверждения брони">Отправить</button>
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="appointment-item">
+          <label for="appointment-date">Дата</label>
+          <input type="text" name="date" id="appointment-date" placeholder="08.10.2017" required>
+        </p>
+        <p class="appointment-item">
+          <label for="appointment-time">Время</label>
+          <input type="text" name="time" id="appointment-time" placeholder="10:00" required>
+        </p>
+        <p class="appointment-item">
+          <label for="appointment-name">Ваше имя</label>
+          <input type="text" name="name" id="appointment-name" placeholder="Борода" required>
+        </p>
+        <p class="appointment-item">
+          <label for="appointment-phone">Телефон</label>
+          <input type="tel" name="phone" id="appointment-phone" placeholder="+7 123 456-78-90" required>
+        </p>
+        <button type="submit">Отправить</button>
       </form>
     </section>
   </main>
@@ -122,8 +127,8 @@
     <p class="footer-contacts">Барбершоп «Бородинский»<br>
       Адрес: г. Санкт-Петербург, б. Конюшенная, д. 19/8<br>
       <!-- Почему тут должна быть ссылка, а не попап? -->
-      <button type="button" aria-label="Расположение на карте">Как нас найти?</button><br>
-      Телефон: <a href="tel: +7-495-666-02-66" aria-label="Позвонить в барбершоп «Бородинский»">+7 (495) 666-02-66</a>
+      <a href="map.html">Как нас найти?</a><br>
+      Телефон: <a href="tel:+7-495-666-02-66">+7 (495) 666-02-66</a>
     </p>
     <div class="footer-social">
       <b>Давайте дружить!</b>
@@ -135,7 +140,7 @@
       </ul>
       <p class="footer-copyright">
         <b>Разработано:</b>
-        <a class="button" href="https://htmlacademy.ru" aria-label="Создатели сайта htmlacademy.ru">Html Academy</a>
+        <a class="button" href="https://htmlacademy.ru">Html Academy</a>
       </p>
     </div>
   </footer>
@@ -143,22 +148,36 @@
   <section class="modal modal-login">
     <h2>Личный кабинет</h2>
     <p>Введите свой логин и пароль</p>
-    <form class="login-form" action="post">
-      <input type="text" value="Логин" aria-label="Введите логин">
-      <input type="text" value="Пароль" aria-label="Введите пароль">
-      <input type="checkbox" class="checkbox-item" name="remember-me" id="remember-me" checked>
-      <label for="remember-me">Запомните меня</label>
-      <a href="#" aria-label="Страница восстановления пароля">Я забыл пароль</a>
-      <button type="submit">Войти</button>
+    <form class="login-form" action="https://htmlacademy.ru" method="post">
+      <p>
+        <label class="visually-hidden">
+          Логин
+          <input class="login-icon-user" type="text" placeholder="Логин">
+        </label>
+      </p>
+      <p>
+        <label class="visually-hidden">
+          Пароль
+          <input class="login-icon-password" type="password" placeholder="Пароль">
+        </label>
+      </p>
+      <p class="login-password-info">
+        <label><input class="checkbox-item" type="checkbox" name="remember" id="login-password-info" checked>
+          Запомните меня
+        </label>
+        <a class="restore" href="#">Я забыл пароль</a>
+      </p>
+      <button class="button" type="submit">Войти</button>
     </form>
-    <span class="modal-close">x</span>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <!-- здесь будет интерактивная карта (или картинка) -->
-    <span class="modal-close">x</span>
+    <img src="img/map.jpg" width="766" height="560" alt="Офис компании по адресу Санкт-Петербург, ул. Большая Конюшенная 19/8">
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
+
   <script>
     document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
       ':35729/livereload.js?snipver=1"></' + 'script>')
