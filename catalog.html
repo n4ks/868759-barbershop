@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -42,7 +45,7 @@
     <section class="filters">
       <h2 class="visually-hidden">Фильтр товаров</h2>
       <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="manufacturers">
+        <fieldset>
           <legend>Производители:</legend>
           <ul>
             <li class="filter-option">
@@ -74,20 +77,20 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="product-groups">
+        <fieldset>
           <legend>Группы товаров:</legend>
           <ul>
             <li class="filter-option">
-              <input type="radio" class="visually-hidden filter-input filter-input-radio" name="product-group" id="filter-shave">
+              <input type="radio" class="visually-hidden filter-input filter-input-radio" name="product-group" value="shaving" id="filter-shave">
               <label for="filter-shave">Бритвенные принадлежности</label>
             </li>
             <li class="filter-option">
-              <input type="radio" class="visually-hidden filter-input filter-input-radio" name="product-group" id="filter-care"
+              <input type="radio" class="visually-hidden filter-input filter-input-radio" name="product-group" value="hair-care" id="filter-care"
                 checked>
               <label for="filter-care">Средства для ухода</label>
             </li>
             <li class="filter-option">
-              <input type="radio" class="visually-hidden filter-input filter-input-radio" name="product-group" id="filter-accessories">
+              <input type="radio" class="visually-hidden filter-input filter-input-radio" name="product-group" value="accessories" id="filter-accessories">
               <label for="filter-accessories">Аксессуары</label>
             </li>
           </ul>
